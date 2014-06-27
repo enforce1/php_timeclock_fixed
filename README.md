@@ -25,23 +25,23 @@ Anyhow, here's the instructions for installation.
 
 1. Create a MySQL user for phptimeclock to interact with your database. 
 
-+ Enter the MySQL interactive prompt
+1. Enter the MySQL interactive prompt
 	
 > `shell> mysql -u root -p`
 	
-+ Run the below command to create your new user. The user I'm making here is "sqltimeclock". You can make yours whatever you want, just be sure to record it. This is also where you set that user's password, so be careful. The password in this example is "PHPT1ME!"
+1. Run the below command to create your new user. The user I'm making here is "sqltimeclock". You can make yours whatever you want, just be sure to record it. This is also where you set that user's password, so be careful. The password in this example is "PHPT1ME!"
 	
-> `mysql> CREATE USER 'sqltimeclock'@'localhost' IDENTIFIED BY 'PHPT1ME!';`
+1. `mysql> CREATE USER 'sqltimeclock'@'localhost' IDENTIFIED BY 'PHPT1ME!';`
 
-+ Grant the user you just created access to the database it needs to mess with.
+1. Grant the user you just created access to the database it needs to mess with.
 	
 > `mysql> GRANT ALL PRIVILEGES ON timeclock . * TO 'sqltimeclock'@'localhost';`
 
-+ Now we flush out the privileges to make sure we're good.
+1. Now we flush out the privileges to make sure we're good.
 	
 > `mysql> FLUSH PRILEGES;`
 
-+ Now we get out of interactive mode. 
+1. Now we get out of interactive mode. 
 	
 > `mysql> EXIT`
 
